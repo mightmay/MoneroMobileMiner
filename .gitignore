@@ -1,0 +1,11 @@
+*.iml
+.gradle
+gradle/
+/local.properties
+.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+app/src/main/assets/xlarig/armeabi-v7a/xlarig.v1

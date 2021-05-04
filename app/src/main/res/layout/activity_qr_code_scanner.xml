@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QrCodeScannerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_body"
+        android:layout_above="@+id/llCancel"
+        android:clickable="false"
+        android:gravity="center">
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/barcodeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:zxing_scanner_layout="@layout/custom_barcode_scanner">
+        </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+        <Button
+            android:id="@+id/btnFlashlight"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:text="Turn on flashlight"
+            app:backgroundTint="@color/bg_blue"
+            android:textColor="@color/txt_button_filled"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            app:cornerRadius="5dp"
+            android:onClick="switchFlashlight"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_body"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                app:backgroundTint="@color/bg_lighter"
+                android:text="@string/cancel"
+                android:textColor="@color/txt_button_filled"
+                android:textAllCaps="false"
+                app:cornerRadius="7.5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
