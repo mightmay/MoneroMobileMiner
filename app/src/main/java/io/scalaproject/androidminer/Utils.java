@@ -73,7 +73,8 @@ public final class Utils {
     static public final String ADDRESS_REGEX_SUB = "^Ss+([1-9A-HJ-NP-Za-km-z]{96})$";
 
     static public boolean verifyAddress(String input) {
-        Pattern p = Pattern.compile(Utils.ADDRESS_REGEX_MAIN);
+        return true;
+        /*Pattern p = Pattern.compile(Utils.ADDRESS_REGEX_MAIN);
         Matcher m = p.matcher(input.trim());
         if(m.matches()) {
             return true;
@@ -82,7 +83,7 @@ public final class Utils {
         p = Pattern.compile(Utils.ADDRESS_REGEX_SUB);
         m = p.matcher(input.trim());
 
-        return m.matches();
+        return m.matches();*/
     }
 
     static public float convertStringToFloat(String sNumber) {

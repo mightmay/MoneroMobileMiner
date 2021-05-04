@@ -1362,6 +1362,8 @@ public class MainActivity extends BaseActivity
     }
 
     private boolean validateSettings() {
+        return true;
+        /*
         PoolItem pi = ProviderManager.getSelectedPool();
 
         if(!Config.read(Config.CONFIG_INIT).equals("1")) {
@@ -1395,7 +1397,7 @@ public class MainActivity extends BaseActivity
             return false;
         }
 
-        return  true;
+        return  true;*/
     }
 
     public void updateUI() {
